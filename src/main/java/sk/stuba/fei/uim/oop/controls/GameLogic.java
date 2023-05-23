@@ -33,12 +33,16 @@ public class GameLogic extends UniversalAdapter {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        if (shape.equals("CIRCLE")) {
-            this.canvas.getShapes().add(new Circle(e.getX(), e.getY(), radius));
-        } else if (shape.equals("SQUARE")) {
-            this.canvas.getShapes().add(new Rectangle(e.getX(), e.getY(), radius));
-        } else if (shape.equals("HOURGLASS")) {
-            this.canvas.getShapes().add(new HourGlass(e.getX(), e.getY(), radius));
+        switch (shape) {
+            case "CIRCLE":
+                this.canvas.getShapes().add(new Circle(e.getX(), e.getY(), radius));
+                break;
+            case "SQUARE":
+                this.canvas.getShapes().add(new Rectangle(e.getX(), e.getY(), radius));
+                break;
+            case "HOURGLASS":
+                this.canvas.getShapes().add(new HourGlass(e.getX(), e.getY(), radius));
+                break;
         }
         this.canvas.removeShapes();
         this.mainWindow.repaint();

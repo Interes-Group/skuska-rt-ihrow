@@ -33,12 +33,16 @@ public class Canvas extends JPanel {
         ArrayList<Shape> newShapeList = new ArrayList<>();
 
         for (Shape s : this.shapes) {
-            if (shape.equals("CIRCLE")) {
-                newShapeList.add(new Circle(s.getX(), s.getY(), s.getRadius()));
-            } else if (shape.equals("SQUARE")) {
-                newShapeList.add(new Rectangle(s.getX(), s.getY(), s.getRadius()));
-            } else if (shape.equals("HOURGLASS")) {
-                newShapeList.add(new HourGlass(s.getX(), s.getY(), s.getRadius()));
+            switch (shape) {
+                case "CIRCLE":
+                    newShapeList.add(new Circle(s.getX(), s.getY(), s.getRadius()));
+                    break;
+                case "SQUARE":
+                    newShapeList.add(new Rectangle(s.getX(), s.getY(), s.getRadius()));
+                    break;
+                case "HOURGLASS":
+                    newShapeList.add(new HourGlass(s.getX(), s.getY(), s.getRadius()));
+                    break;
             }
          }
 
