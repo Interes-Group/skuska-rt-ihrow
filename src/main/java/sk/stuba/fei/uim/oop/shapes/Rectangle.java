@@ -11,7 +11,6 @@ public class Rectangle extends Shape {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.setColor(Color.BLACK);
         g.fillRect(x, y, radius, radius);
     }
 

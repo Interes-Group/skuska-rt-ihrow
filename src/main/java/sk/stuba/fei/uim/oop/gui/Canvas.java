@@ -58,6 +58,7 @@ public class Canvas extends JPanel {
         super.paintComponents(g);
         this.removeShapes();
         for (int i = 0; i < this.shapes.size(); i++) {
+            g.setColor(new Color((i) % 255, 0, 0));
             if (i == 0 || i == this.shapes.size() - 1 || i % this.spacing == 0) {
                 this.shapes.get(i).paintComponent(g);
             }

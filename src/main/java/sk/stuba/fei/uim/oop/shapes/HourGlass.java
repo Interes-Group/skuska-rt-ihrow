@@ -11,10 +11,9 @@ public class HourGlass extends Shape {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.setColor(Color.BLACK);
         int xPoints[] = {this.x - radius, this.x + radius, this.x};
-        int yPointsTop[] = {this.y - radius/2,this.y - radius/2,this.y};
-        int yPointsBottom[] = {this.y + radius/2,this.y + radius/2,this.y};
+        int yPointsTop[] = {this.y - radius,this.y - radius,this.y};
+        int yPointsBottom[] = {this.y + radius,this.y + radius,this.y};
 
         g.fillPolygon(xPoints, yPointsTop, 3);
         g.fillPolygon(xPoints, yPointsBottom, 3);
