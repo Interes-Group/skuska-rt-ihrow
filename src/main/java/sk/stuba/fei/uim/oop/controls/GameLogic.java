@@ -2,8 +2,8 @@ package sk.stuba.fei.uim.oop.controls;
 
 import sk.stuba.fei.uim.oop.gui.Canvas;
 import sk.stuba.fei.uim.oop.shapes.Circle;
+import sk.stuba.fei.uim.oop.shapes.HourGlass;
 import sk.stuba.fei.uim.oop.shapes.Rectangle;
-import sk.stuba.fei.uim.oop.shapes.Shape;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -37,6 +37,8 @@ public class GameLogic extends UniversalAdapter {
             this.canvas.getShapes().add(new Circle(e.getX(), e.getY(), radius));
         } else if (shape.equals("SQUARE")) {
             this.canvas.getShapes().add(new Rectangle(e.getX(), e.getY(), radius));
+        } else if (shape.equals("HOURGLASS")) {
+            this.canvas.getShapes().add(new HourGlass(e.getX(), e.getY(), radius));
         }
         this.canvas.removeShapes();
         this.mainWindow.repaint();

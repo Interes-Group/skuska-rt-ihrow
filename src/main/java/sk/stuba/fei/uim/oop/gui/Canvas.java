@@ -1,8 +1,8 @@
 package sk.stuba.fei.uim.oop.gui;
 
 import lombok.Data;
-import lombok.Getter;
 import sk.stuba.fei.uim.oop.shapes.Circle;
+import sk.stuba.fei.uim.oop.shapes.HourGlass;
 import sk.stuba.fei.uim.oop.shapes.Rectangle;
 import sk.stuba.fei.uim.oop.shapes.Shape;
 
@@ -37,6 +37,8 @@ public class Canvas extends JPanel {
                 newShapeList.add(new Circle(s.getX(), s.getY(), s.getRadius()));
             } else if (shape.equals("SQUARE")) {
                 newShapeList.add(new Rectangle(s.getX(), s.getY(), s.getRadius()));
+            } else if (shape.equals("HOURGLASS")) {
+                newShapeList.add(new HourGlass(s.getX(), s.getY(), s.getRadius()));
             }
          }
 
